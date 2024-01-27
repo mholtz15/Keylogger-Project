@@ -14,3 +14,7 @@ Using the term "with open("keyfile.txt",'a') as logKey" allows an external text 
 <br>
 <br>
 As shown above, this is the text file in which is created as soon as the Keylogger is active. The file contains the exact keystrokes. However, this can be used maliciously; since a Keylogger can be inputted onto a device undetectably (if a user does not have the latest of software protection updates) malicious actors can expose this application. For example, if a user logs into one of their accounts, the Keylogger will mirror their username and password into a textfile in which can be abused by a malicious actor to get a users personal information.
+<br>
+<br>
+<ins>How to create a Keylogger</ins> <br>
+1. 

